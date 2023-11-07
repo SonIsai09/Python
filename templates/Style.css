@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing:border-box ;
+    box-sizing:border-box;
 }
 body{
     background-image: url('Fondoo.jpg');
@@ -46,7 +46,7 @@ h1{
     font-size: 18px;
 }
 
-.form-agg .button{
+.form-agg .save{
     width: 100%;
     background: #1f53c5;
     border: none;
@@ -55,34 +55,71 @@ h1{
     margin: 16px 0;
     font-size: 16px;
 }
+.container1 {
+    margin: 20px auto;
+    max-width: 80%;
+    padding-top: 3px;
+}
 
-.view{
-    width: 80%;
+.container {
+    width: 1300px;
     background: #24303c;
-    padding: 30px;
+    padding: 30px ;
     margin: auto;
     margin-top: 100px;
     border-radius: 4px;
     font-family: 'calibri';
     color:white;
+    box-shadow: 7px 13px 37px #000;
+    text-align: center;
 }
 
-.view .delete{
-    width: 100%px;
-    background: firebrick;
-    border: none;
-    padding: 4px;
-    color: white;
-    margin: 16px 0;
-    font-size: 16px;
+h3{
+    padding: 10px;
+    padding-top: px;
 }
 
-.view .edit{
-    width: 100%px;
-    background: #1f53c5;
-    border: none;
+h2{
+    background:rgb(73, 72, 72) ;
+    text-align:center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    position: relative;
+    padding: 7px 15px;
+    size: 5px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+    background-color: #4e5053;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+th{
+    background-color:  #4b535c;
     padding: 4px;
     color: white;
-    margin: 16px 0;
-    font-size: 16px;
+} 
+
+td {
+    padding: 4px;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+    background: #ccc;
 }
+
+
+button {
+    width: 50%;
+    padding: 5px;
+    border-radius: 4px;
+    margin-bottom: 7px;
+    border: 1px solid #1f53c5;
+    font-family: 'calibri';
+    font-size: 10px;
+}
+/*----------------------------------------------------------------------------------*/
