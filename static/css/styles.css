@@ -10,7 +10,7 @@ body{
 
 h1{
     background:rgb(73, 72, 72) ;
-    text-align:left;
+    text-align:center;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: white;
@@ -57,18 +57,19 @@ h1{
 }
 
 .view{
-    width: 80%;
+    width: 75%;
     background: #24303c;
-    padding: 30px;
+    padding: 1px;
     margin: auto;
-    margin-top: 100px;
-    border-radius: 4px;
-    font-family: 'calibri';
+    margin-top: 10px;
+    border-radius: 10px;
+    font-family: sans-serif;
     color:white;
+    font-size: 16px;
 }
 
 .view .delete{
-    width: 100%px;
+    width: 1%px;
     background: firebrick;
     border: none;
     padding: 4px;
@@ -78,11 +79,50 @@ h1{
 }
 
 .view .edit{
-    width: 100%px;
+    width: 10%px;
     background: #1f53c5;
     border: none;
     padding: 4px;
     color: white;
     margin: 16px 0;
+    font-size: 16px;
+}
+
+.btn-primary {
+    padding: 10px 20px; 
+    background-color: #007bff; 
+    color: #fff;
+    border: none; 
+    border-radius: 5px; 
+    text-align: center; 
+    display: block; 
+    margin: 0 auto;
+    font-size: 16px; 
+    font-weight: bold; 
+    text-decoration: none; 
+    cursor: pointer; 
+  }
+
+
+
+
+.btn-custom {
+    background-color: #007bff;
+    color: #ffffff;
+    border: 1px solid #007bff;
+    border-radius: 4px;
+    padding: 5px 10px;
+    font-size: 15px;
+}
+
+.btn-custom:hover {
+    background-color: #007bff;
+    border: 1px solid #007bff;
+    color: #ffffff;
+}
+.form-control{
+    width: 8%;
+    border: 1px solid #1f53c5;
+    font-family: 'calibri';
     font-size: 16px;
 }

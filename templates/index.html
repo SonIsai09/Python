@@ -1,78 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Planilla</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
-   
+
 
     <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">-->
     <style>
-        
+
     </style>
 </head>
+
 <body>
-    <h1 class="text-center mt-5 mb-5">PLANILLA </h1>
-   <div class="container">
+    <h1 class="text-center mt-5 mb-5">PLANILLA SUPPORTHUB </h1>
+    <div class="container">
         <div class="col-md-6 mb-3">
             <div class="card">
                 <section class="form-agg">
-                    <h3>Ingresar nueva empleado</h3>
+                    <h3>Ingresar nueva Empleado</h3>
                     <form action="/planillas" method="POST">
-                        <input type="text" class="form-contro"  placeholder="Codigo Empleado" name="codEmpleado">
+                        <input type="text" class="form-contro" placeholder="Codigo Empleado" name="codEmpleado">
                         <br>
-                        <input type="text" class="form-contro"  placeholder="Nombres" name="Nombre">
+                        <input type="text" class="form-contro" placeholder="Nombres" name="Nombre">
                         <br>
-                        <input type="text" class="form-contro"  placeholder="Apellidos" name="Apellido">
+                        <input type="text" class="form-contro" placeholder="Apellidos" name="Apellido">
                         <br>
-                        <input type="text" class="form-contro"  placeholder="Cargo" name="Cargo">
+                        <input type="text" class="form-contro" placeholder="Cargo" name="Cargo">
                         <br>
-                        <input type="text" class="form-contro"  placeholder="Correo" name="Correo">
+                        <input type="text" class="form-contro" placeholder="Correo" name="Correo">
                         <br>
-                        <input type="text" class="form-contro"  placeholder="Direccion" name="Direccion">
+                        <input type="text" class="form-contro" placeholder="Direccion" name="Direccion">
                         <br>
-                        <input type="text" class="form-contro"  placeholder="Salario" name="Salario">
-                        <br>
+                        <input type="text" class="form-contro" placeholder="Salario" name="Salario">
+
                         <button class="btn btn-primary" type="submit">Guardar</button>
                     </form>
                 </section>
             </div>
-        </div> 
+        </div>
         <div class="col-md-6">
             <div class="card">
-                
+
                 <div class="card-body">
-                    <div class="row row-col-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-1">
-                     {% for planilla in planillas %}
-                             
-                              <section class="view">
-                                   <form action="/edit/{{planilla.codEmpleado}}" method="POST">
-                                      <small>Codigo Empleado</small>
-                                      <input type="text" class="form-control" value="{{planilla.codEmpleado}}"  name="codEmpleado">
-                                      <small>Nombre</small>
-                                      <input type="text" class="form-control" value="{{planilla.Nombre}}" name="Nombre">
-                                      <small>Apellido</small>
-                                      <input type="text" class="form-control" value="{{planilla.Apellido}}" name="Apellido">
-                                      <small>Cargo</small>
-                                      <input type="text" class="form-control" value="{{planilla.Cargo}}" name="Cargo">
-                                      <small>Correo</small>
-                                      <input type="text" class="form-control" value="{{planilla.Correo}}" name="Correo">
-                                      <small>Direccion</small>
-                                      <input type="text" class="form-control" value="{{planilla.Direccion}}" name="Direccion">
-                                      <small>Salario</small>
-                                      <input type="text" class="form-control" value="{{planilla.Salario}}" name="Salario">
-                                                                     
-                                      <button class="btn btn-primary btn-sm mt-3" type="submit">Editar</button>
-                                      <a href="{{url_for('delete', planilla_CodEmpleado=planilla.codEmpleado)}}" class="btn btn-danger btn-sm mt-3">Eliminar</a> 
-                                    </form>
-                                </section>
-                            
-                     {% endfor %}
+                    <div class="row row-col-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-2">
+
+                        {% for planilla in planillas %}
+
+                        <section class="view">
+                            <form action="/edit/{{planilla.codEmpleado}}" method="POST">
+                                <small>Codigo Empleado</small>
+                                <input type="text" class="form-control" value="{{planilla.codEmpleado}}"
+                                    name="codEmpleado">
+                                <small>Nombre</small>
+                                <input type="text" class="form-control" value="{{planilla.Nombre}}" name="Nombre">
+                                <small>Apellido</small>
+                                <input type="text" class="form-control" value="{{planilla.Apellido}}" name="Apellido">
+                                <small>Cargo</small>
+                                <input type="text" class="form-control" value="{{planilla.Cargo}}" name="Cargo">
+                                <small>Correo</small>
+                                <input type="text" class="form-control" value="{{planilla.Correo}}" name="Correo">
+                                <small>Direccion</small>
+                                <input type="text" class="form-control" value="{{planilla.Direccion}}" name="Direccion">
+                                <small>Salario</small>
+                                <input type="text" class="form-control" value="{{planilla.Salario}}" name="Salario">
+                                <form action="" method="post">
+                                        <button class="btn btn-custom btn-sm" type="submit" name="editar">Editar</button>
+                                        
+                                        <a href="{{url_for('delete', planilla_CodEmpleado=planilla.codEmpleado)}}" class="btn btn-custom  btn-sm mt-3" style="text-decoration: none">Eliminar</a> 
+                                
+                                    
+                                </form>
+                                
+                                
+
+                            </form>
+
+
+                        </section>
+
+                        {% endfor %}
                     </div>
                 </div>
             </div>
         </div>
-   </div>
+    </div>
 </body>
+
 </html>
