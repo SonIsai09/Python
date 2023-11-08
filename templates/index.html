@@ -38,6 +38,7 @@
 
                         <button class="btn btn-primary" type="submit">Guardar</button>
                     </form>
+                  
                 </section>
             </div>
         </div>
@@ -67,14 +68,15 @@
                                 <small>Salario</small>
                                 <input type="text" class="form-control" value="{{planilla.Salario}}" name="Salario">
                                 <form action="" method="post">
-                                        <button class="btn btn-custom btn-sm" type="submit" name="editar">Editar</button>
-                                        
-                                        <a href="{{url_for('delete', planilla_CodEmpleado=planilla.codEmpleado)}}" class="btn btn-custom  btn-sm mt-3" style="text-decoration: none">Eliminar</a> 
-                                
-                                    
+                                    <button class="btn btn-custom btn-sm" type="submit" name="editar">Editar</button>
+
+                                    <a href="{{url_for('delete', planilla_CodEmpleado=planilla.codEmpleado)}}"
+                                        class="btn btn-custom  btn-sm mt-3" style="text-decoration: none">Eliminar</a>
+
+
                                 </form>
-                                
-                                
+
+
 
                             </form>
 

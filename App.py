@@ -14,6 +14,8 @@ def home():
 #Method Post
 @App.route('/planillas', methods=['POST'])
 def AddEmpleado():    
+ error_message = None
+ if request.method == 'POST':
     planillas = db['planillas']
     codEmpleado = request.form['codEmpleado']
     Nombre = request.form['Nombre']
@@ -22,6 +24,8 @@ def AddEmpleado():
     Correo = request.form['Correo']
     Direccion = request.form['Direccion']
     Salario = request.form['Salario']
+    if not codEmpleado or not Nombre or not Apellido or not Cargo or not Correo or not Direccion or not Salario:
+            return "Por favor, completa todos los campos del formulario."
 
     if  codEmpleado and Nombre and Apellido and Cargo and Correo and Direccion and Salario:
         planilla =Planilla (codEmpleado,Nombre,Apellido,Cargo,Correo,Direccion, Salario)
@@ -36,6 +40,7 @@ def AddEmpleado():
             'Salario': Salario
 
         })
+        
         return redirect(url_for('home'))
     else:
         return notFound()
